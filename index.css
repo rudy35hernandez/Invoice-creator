@@ -1,0 +1,27 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+
+#header-container{
+    background: #3A69D2;
+    padding: 20px 20px
+}
+
+
+
+h1{
+    color: white;
+    font-family: Inter;
+    font-weight: 800;
+    line-height: 40px;
+    text-align: center;
+    font-size: 40px;
+}
+
+h2{
+    color: white;
+    text-align: center;
+    font-size: 20px
+}
