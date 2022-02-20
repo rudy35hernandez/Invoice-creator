@@ -1,12 +1,13 @@
 html, body {
     margin: 0;
     padding: 0;
+    min-width: 400px;
 }
 
 
 #header-container{
     background: #3A69D2;
-    padding: 20px 20px
+    padding: 20px 20px; 
 }
 
 
@@ -18,10 +19,66 @@ h1{
     line-height: 40px;
     text-align: center;
     font-size: 40px;
+    margin-bottom: 10px;
 }
 
-h2{
+#header-h2{
     color: white;
+    font-family: Inter;
+    font-weight: normal;
+    line-height: 20px;
     text-align: center;
-    font-size: 20px
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+
+#invoice-div{
+    background: #1F2937;
+    padding: 20px 20px
+}
+
+#invoice-content{
+    margin: 10px 10px;
+}
+
+#service-buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 9px 13px; */
+}
+
+.service-btn{
+    background: #D1D4F4;
+    color: #4A4E74;
+    width: 143.17px;
+    height: 45px;
+    border-radius: 7px;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 500;
+    
+}
+
+
+#task-total{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0px;
+}
+
+.task-total-hdr{
+    color: #D5D4D8;
+    font: Inter;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 20px;
+    
+}
+
+
+.task-div{
+    display: flex;
+    justify-content: space-between
 }
