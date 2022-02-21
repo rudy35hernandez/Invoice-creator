@@ -11,6 +11,7 @@ const pullWeedsBtn = document.querySelector(".pull-weeds-btn")
 carwashBtn.addEventListener("click", function(){
     if(carWash === false){
         tasks.push("car wash")
+        total += 10;
         carWash = true;
         console.log(tasks)
     }
@@ -19,6 +20,7 @@ carwashBtn.addEventListener("click", function(){
 mowLawnBtn.addEventListener("click", function(){
     if(mowLawn === false){
         tasks.push("mow lawn")
+        total += 20
         mowLawn = true;
         console.log(tasks)
     }
@@ -27,6 +29,7 @@ mowLawnBtn.addEventListener("click", function(){
 pullWeedsBtn.addEventListener("click", function(){
     if(pullWeeds === false){
         tasks.push("pull weeds")
+        total += 30
         pullWeeds = true;
         console.log(tasks)
     }
