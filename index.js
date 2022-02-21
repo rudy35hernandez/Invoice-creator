@@ -7,6 +7,7 @@ const carwashBtn = document.querySelector(".car-wash-btn")
 const mowLawnBtn = document.querySelector(".mow-lawn-btn")
 const pullWeedsBtn = document.querySelector(".pull-weeds-btn")
 
+
 carwashBtn.addEventListener("click", function(){
     if(carWash === false){
         tasks.push("car wash")
@@ -30,3 +31,5 @@ pullWeedsBtn.addEventListener("click", function(){
         console.log(tasks)
     }
 })
+
+/// Need to add code to display each array item to the dom as it's added to the array
