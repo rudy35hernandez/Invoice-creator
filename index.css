@@ -74,10 +74,10 @@ h1{
 }
 
 
-#task-total{
+.task-total{
     display: flex;
     justify-content: space-between;
-    margin: 10px 0px;
+    margin: 10px 0px 0 0;
 }
 
 .task-total-hdr{
@@ -93,4 +93,19 @@ h1{
 .task-div{
     display: flex;
     justify-content: space-between
+}
+
+#break-line{
+    margin: 16px 0 0 0;
+    border: solid white
+}
+
+#invoice-btn{
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 500px;
+    width: 100%;
+    padding: 10px;
+    background: #3A69D2;
+    color: white;
 }
