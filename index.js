@@ -7,7 +7,7 @@ let pullWeeds = false
 const carwashBtn = document.querySelector(".car-wash-btn")
 const mowLawnBtn = document.querySelector(".mow-lawn-btn")
 const pullWeedsBtn = document.querySelector(".pull-weeds-btn")
-
+let totalP = document.getElementById("total")
 const servicesSec = document.getElementById('services-sec')
 
 /// this is the div that will contain both p's ///
@@ -19,8 +19,10 @@ const servicesSec = document.getElementById('services-sec')
 // task.classList.add('task-set')
 // const taskPrice = document.create("p")
 // taskPrice.classList.add('price-set')
+const cashSign = document.createElement("span")
+cashSign.classList.add("cash-sign")
 
-
+cashSign.innerHTML = "$"
 
 
 function render(arr){
@@ -28,7 +30,6 @@ function render(arr){
         for(let i = 0; i < tasks.length; i++){
             
             tasks = []
-            
             const taskDiv = document.createElement("div")
             taskDiv.classList.add("task-div")
             const taskSet = document.createElement("p");
@@ -38,16 +39,18 @@ function render(arr){
             taskSet.textContent = arr[i]
             taskDiv.append(taskSet)
             
+         
+            
             
             taskDiv.append(taskPrice)
-            if(arr[i] === "car wash"){
-                taskPrice.textContent = 10
+            if(arr[i] === "Wash Car"){
+                taskPrice.textContent = `$10`
                 taskDiv.append(taskPrice)
-            } else if(arr[i] === "mow lawn"){
-                taskPrice.textContent = 20
+            } else if(arr[i] === "Mow Lawn"){
+                taskPrice.textContent = `$20`
                 taskDiv.append(taskPrice)
             } else{
-                taskPrice.textContent = 30
+                taskPrice.textContent = `$30`
                 taskDiv.append(taskPrice)
             }
             
@@ -58,25 +61,35 @@ function render(arr){
 
 carwashBtn.addEventListener("click", function(){
     if(carWash === false){
-        tasks.push("car wash")
-        carWash = true;
-        
+        tasks.push("Wash Car")
+        carWash = true
+        total += 10
+        totalP.textContent = `$${total}`
+        console.log(total)
         render(tasks)
     }
 })
 
 mowLawnBtn.addEventListener("click", function(){
     if(mowLawn === false){
-        tasks.push("mow lawn")
+        tasks.push("Mow Lawn")
         mowLawn = true
+        total += 20
+        console.log(total)
+        totalP.innerHTML = `$${total}`
         render(tasks)
     }
 })
 
 pullWeedsBtn.addEventListener("click", function(){
     if(pullWeeds === false){
-        tasks.push("pull weeds")
-        pullWeeds = true;
+        tasks.push("Pull Weeds")
+        pullWeeds = true
+        total += 30
+        console.log(total)
+        totalP.innerHTML = `$${total}`
         render(tasks)
     }
+    
 })
+
